@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10091d"><title>Шлем Пустоты — сообщения об ошибках</title>
+<style>
+:root{--bg:#09070f;--panel:#151020;--purple:#a855f7;--text:#f4efff;--muted:#b8aacb;--line:#38264e}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#321451 0,transparent 45%),var(--bg);color:var(--text);font:16px/1.55 system-ui,Segoe UI,Arial,sans-serif}.wrap{width:min(920px,calc(100% - 32px));margin:auto}.top{text-align:center;padding:34px 0 22px}.mark{display:inline-grid;place-items:center;width:66px;height:66px;border:1px solid #7e3fc2;border-radius:18px;background:#1b1029;font-size:32px}.eyebrow{color:#c084fc;text-transform:uppercase;letter-spacing:.18em;font-size:12px;font-weight:800;margin:16px 0 4px}h1{font-size:clamp(32px,6vw,52px);line-height:1.05;margin:0;font-weight:900;letter-spacing:-.04em}h1 span{color:#c084fc}.lead{max-width:620px;color:var(--muted);margin:14px auto 0}.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}.chip{border:1px solid var(--line);background:#130d1e;color:#d9c5f3;padding:5px 10px;border-radius:99px;font-size:12px}main{padding:10px 0 56px}.card{background:linear-gradient(150deg,#191126,#100c18);border:1px solid var(--line);border-radius:20px;padding:clamp(18px,4vw,30px);box-shadow:0 16px 50px #0004}.card h2{margin:0 0 6px;font-size:22px}.sub{color:var(--muted);margin:0 0 22px;font-size:14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.full{grid-column:1/-1}label{font-size:13px;font-weight:750;color:#e6d7f7}input,select,textarea{width:100%;border:1px solid #49335f;background:#0c0812;color:var(--text);padding:12px 13px;border-radius:11px;font:inherit;outline:none}input:focus,select:focus,textarea:focus{border-color:#bd75ff;box-shadow:0 0 0 3px #a855f722}textarea{min-height:130px;resize:vertical}::placeholder{color:#786888}.hint,.notice{font-size:12px;color:#9d8bae}.checks{display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:13px}.checks input{width:auto;margin-top:5px;accent-color:var(--purple)}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.btn{border:0;border-radius:12px;padding:12px 17px;font-weight:800;font-size:14px;cursor:pointer}.primary{background:linear-gradient(110deg,#a855f7,#7c3aed);color:white}.secondary{background:#21172e;color:#eadcfb;border:1px solid #49335f}.btn:hover{filter:brightness(1.08)}.status{display:none;margin-top:16px;padding:12px;border-radius:10px;background:#102318;border:1px solid #245c39;color:#86efac;font-size:14px}.status.show{display:block}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.step{border:1px solid var(--line);background:#120d1b;border-radius:14px;padding:14px}.num{color:#c084fc;font-weight:900;font-size:12px}.step strong{display:block;margin:5px 0;font-size:14px}.step p{font-size:12px;color:var(--muted);margin:0}.footer{text-align:center;color:#786888;font-size:12px;padding:0 0 28px}@media(max-width:620px){.grid,.steps{grid-template-columns:1fr}.full{grid-column:auto}.top{padding-top:24px}}
+</style></head><body>
+<header class="top wrap"><div class="mark" aria-hidden="true">◈</div><div class="eyebrow">Minecraft Java · Forge 1.20.1</div><h1>ШЛЕМ <span>ПУСТОТЫ</span></h1><p class="lead">Нашёл ошибку или что-то работает не так? Заполни форму — отчёт можно сохранить и отправить автору мода.</p><div class="chips"><span class="chip">Forge 47.4.10</span><span class="chip">Баг-репорт</span><span class="chip">Русский язык</span></div></header>
+<main class="wrap"><section class="card"><h2>Сообщить об ошибке</h2><p class="sub">Опиши, что произошло, и укажи версию игры. Не добавляй пароли или личные данные.</p>
+<form id="reportForm"><div class="grid">
+<div class="field"><label for="title">Краткое название ошибки *</label><input id="title" name="title" required maxlength="120" placeholder="Например: шлем не скрывает броню"></div>
+<div class="field"><label for="kind">Тип проблемы *</label><select id="kind" name="kind" required><option value="">Выбери тип</option><option>Вылет игры</option><option>Шлем / способности</option><option>Крафт</option><option>Установка мода</option><option>Визуальная ошибка</option><option>Другое</option></select></div>
+<div class="field"><label for="mc">Версия Minecraft *</label><input id="mc" name="mc" value="1.20.1" required></div><div class="field"><label for="forge">Версия Forge</label><input id="forge" name="forge" value="47.4.10"></div>
+<div class="field"><label for="os">Операционная система</label><select id="os" name="os"><option>Windows 11</option><option>Windows 10</option><option>Linux</option><option>macOS</option><option>Другая / не знаю</option></select></div><div class="field"><label for="when">Когда возникает ошибка?</label><input id="when" name="when" placeholder="Например: при надевании шлема"></div>
+<div class="field full"><label for="details">Что произошло? *</label><textarea id="details" name="details" required maxlength="5000" placeholder="Опиши шаги, после которых появляется ошибка, и что ожидалось вместо этого."></textarea><span class="hint">До 5000 символов. Чем подробнее описание, тем легче исправить ошибку.</span></div>
+<div class="field full"><label for="log">Фрагмент latest.log (если есть)</label><textarea id="log" name="log" maxlength="12000" placeholder="Вставь сюда строки ошибки из .minecraft/logs/latest.log"></textarea></div>
+<div class="field full"><label for="contact">Контакт для ответа (необязательно)</label><input id="contact" name="contact" maxlength="160" placeholder="Например, Discord — только если хочешь указать"></div>
+<div class="field full"><label class="checks"><input type="checkbox" id="confirm" required><span>Я проверил, что в отчёте нет паролей, токенов и другой личной информации. *</span></label></div></div>
+<div class="actions"><button class="btn primary" type="submit">Подготовить отчёт</button><button class="btn secondary" type="button" id="downloadBtn">Скачать отчёт .txt</button><button class="btn secondary" type="button" id="copyBtn">Скопировать текст</button></div><div id="status" class="status" role="status" aria-live="polite"></div>
+<p class="notice">Важно: эта версия сайта работает без сервера. Она формирует отчёт в браузере, но не отправляет его автоматически автору. Используй «Скачать отчёт» или «Скопировать текст», а затем отправь его автору. Для автоматической отправки нужно подключить форму к почте или сервису обработки заявок.</p></form></section>
+<div class="steps"><div class="step"><span class="num">01</span><strong>Повтори ошибку</strong><p>Запомни, что ты сделал перед её появлением.</p></div><div class="step"><span class="num">02</span><strong>Добавь лог</strong><p>Если игра вылетела, приложи соответствующие строки latest.log.</p></div><div class="step"><span class="num">03</span><strong>Отправь автору</strong><p>Скачай отчёт или скопируй текст и передай его разработчику.</p></div></div></main><footer class="footer wrap">Шлем Пустоты · Неофициальная страница поддержки мода</footer>
+<script>
+const form=document.getElementById('reportForm'),statusBox=document.getElementById('status');
+function reportText(){const d=new FormData(form);const f=[['Название',d.get('title')],['Тип',d.get('kind')],['Minecraft',d.get('mc')],['Forge',d.get('forge')],['ОС',d.get('os')],['Когда возникает',d.get('when')],['Описание',d.get('details')],['latest.log',d.get('log')],['Контакт',d.get('contact')]];return 'ОТЧЁТ ОБ ОШИБКЕ — ШЛЕМ ПУСТОТЫ\n'+'='.repeat(38)+'\n'+f.map(([k,v])=>k+':\n'+((v||'Не указано').trim())).join('\n\n')+'\n'}
+function valid(){return form.reportValidity()}
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!valid()) return;
+
+    statusBox.textContent = 'Отправляем отчёт...';
+    statusBox.classList.add('show');
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+        const response = await fetch('/api/report', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.error || 'Не удалось отправить отчёт');
+        }
+
+        statusBox.textContent = 'Отчёт успешно отправлен автору!';
+        form.reset();
+    } catch (error) {
+        statusBox.textContent =
+            'Не удалось отправить отчёт. Проверь, запущен ли сервер.';
+    }
+});
+document.getElementById('downloadBtn').addEventListener('click',()=>{if(!valid())return;const u=URL.createObjectURL(new Blob([reportText()],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=u;a.download='voidhelmet-bug-report.txt';a.click();URL.revokeObjectURL(u);statusBox.textContent='Отчёт скачан. Отправь voidhelmet-bug-report.txt автору мода.';statusBox.classList.add('show')});
+document.getElementById('copyBtn').addEventListener('click',async()=>{if(!valid())return;try{await navigator.clipboard.writeText(reportText());statusBox.textContent='Текст отчёта скопирован. Теперь вставь его в сообщение автору мода.'}catch(e){statusBox.textContent='Не удалось скопировать автоматически. Нажми «Скачать отчёт .txt».'}statusBox.classList.add('show')});
+</script></body></html>
