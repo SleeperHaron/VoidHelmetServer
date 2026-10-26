@@ -7,7 +7,7 @@ const crypto = require('crypto');
 const app = express();
 
 app.use(express.json({ limit: '30kb' }));
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 
 app.post('/api/report', async (req, res) => {
   try {
